@@ -28,10 +28,12 @@ const Icon = ({ name, size = 20 }) => {
     external: <><path d="M14 5h5v5" /><path d="M10 14 19 5" /><path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" /></>,
     mail: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></>,
     github: <><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.2-.4 6.5-1.6 6.5-7A5.5 5.5 0 0 0 19 3.7 5.1 5.1 0 0 0 18.9 0S17.7-.4 15 1.5a13.4 13.4 0 0 0-7 0C5.3-.4 4.1 0 4.1 0A5.1 5.1 0 0 0 4 3.7a5.5 5.5 0 0 0-1.5 3.8c0 5.4 3.3 6.6 6.5 7A4.8 4.8 0 0 0 8 18v4" /><path d="M8 19c-3 .9-3-1.5-4-2" /></>,
+    linkedin: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></>,
     menu: <><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /></>,
     close: <><path d="m6 6 12 12" /><path d="m18 6-12 12" /></>,
     sun: <><circle cx="12" cy="12" r="3.5" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.42 1.42" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.42" /></>,
     moon: <path d="M20.5 14.3A8 8 0 0 1 9.7 3.5 8.1 8.1 0 1 0 20.5 14.3Z" />,
+    briefcase: <><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /><path d="M3 12h18" /><path d="M10 12v2h4v-2" /></>,
     trophy: <><path d="M8 21h8" /><path d="M12 17v4" /><path d="M7 4h10v3a5 5 0 0 1-10 0V4Z" /><path d="M7 5H5a2 2 0 0 0 0 4h2" /><path d="M17 5h2a2 2 0 0 1 0 4h-2" /></>,
     spark: <><path d="m12 3 1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3Z" /><path d="M5 18h.01" /><path d="M19 18h.01" /><path d="M7 21h10" /></>,
   };
@@ -41,7 +43,7 @@ const Icon = ({ name, size = 20 }) => {
 
 const CONTENT = {
   en: {
-    nav: { about: 'About', projects: 'Projects', activities: 'Activities', journey: 'Journey', contact: 'Contact', talk: 'Let’s talk' },
+    nav: { about: 'About', education: 'Education', experience: 'Experience', projects: 'Projects', activities: 'Activities', journey: 'Journey', contact: 'Contact', talk: 'Let’s talk' },
     accessibility: {
       home: 'Back to home',
       nav: 'Main navigation',
@@ -53,6 +55,7 @@ const CONTENT = {
       closeMenu: 'Close menu',
       language: 'Switch language',
       email: 'Send an email',
+      linkedin: 'Open LinkedIn profile',
     },
     hero: {
       eyebrow: 'CYBERSECURITY · FRONTEND · SYSTEMS & NETWORKS',
@@ -78,8 +81,49 @@ const CONTENT = {
       { icon: 'code', title: 'Frontend Development', text: 'Modern, responsive interfaces with strong attention to product thinking, usability and visual detail.' },
       { icon: 'network', title: 'Systems & Networks', text: 'Linux, Windows, Active Directory, LDAP, network administration and secure service deployment.' },
     ],
+    education: {
+      kicker: '02 / EDUCATION',
+      title: 'Academic background',
+      intro: 'My academic path is focused on systems and network administration, with a strong progression toward cybersecurity and secure infrastructure.',
+      items: [
+        { period: '2024 — 2026', degree: 'Master 2 in Systems and Network Administration', school: 'University of Fianarantsoa · National School of Computer Science (ENI)' },
+        { period: '2021 — 2024', degree: 'Bachelor’s degree in Systems and Network Administration', school: 'University of Fianarantsoa · National School of Computer Science (ENI)' },
+        { period: '2019 — 2020', degree: 'Baccalauréat Série C', school: 'Lycée Notre Dame · Mahajanga' },
+      ],
+    },
+    experience: {
+      kicker: '03 / PROFESSIONAL EXPERIENCE',
+      title1: 'From operations',
+      title2: 'to leadership.',
+      intro: 'My professional experience combines company leadership, DevSecOps, systems administration and infrastructure security.',
+      current: 'CURRENT',
+      items: [
+        {
+          period: 'JAN 2026 — PRESENT',
+          role: 'CEO & Cybersecurity Expert',
+          company: 'IKOM Entreprise',
+          description: 'Leading IKOM Entreprise while bringing cybersecurity expertise to its digital, technology and product initiatives, with a focus on secure and reliable solutions.',
+          tags: ['Leadership', 'Strategy', 'Digital Projects'],
+          current: true,
+        },
+        {
+          period: 'AUG 2024 — JAN 2025',
+          role: 'DevSecOps Intern',
+          company: 'Innov-T · Fianarantsoa',
+          description: 'Contributed to service deployment and automation, application maintenance and security hardening.',
+          tags: ['DevSecOps', 'Automation', 'Security'],
+        },
+        {
+          period: 'SEP 2023 — NOV 2023',
+          role: 'Systems & Network Administration Intern',
+          company: 'Refrigepêche Ouest',
+          description: 'Managed user access and sessions with LDAP and Active Directory, deployed IDS/IPS security solutions, and provided hardware and software support.',
+          tags: ['Active Directory', 'LDAP', 'IDS/IPS'],
+        },
+      ],
+    },
     projects: {
-      kicker: '02 / PROJECTS',
+      kicker: '04 / PROJECTS',
       title1: 'Useful projects,',
       title2: 'visible and tangible.',
       intro: 'A selection of projects reflecting my dual focus: crafting polished web products and building technical solutions with real-world value.',
@@ -107,7 +151,7 @@ const CONTENT = {
       ],
     },
     activities: {
-      kicker: '03 / ACTIVITIES & COMMUNITY',
+      kicker: '05 / ACTIVITIES & COMMUNITY',
       title1: 'Share, organize,',
       title2: 'connect with the world.',
       intro: 'Beyond projects and competitions, I invest in international experiences, cybersecurity communities and sharing my journey in tech.',
@@ -118,7 +162,7 @@ const CONTENT = {
       ],
     },
     journey: {
-      kicker: '04 / JOURNEY',
+      kicker: '06 / JOURNEY',
       title1: 'Build, test,',
       title2: 'grow through challenges.',
       intro: 'Technical competitions are an important part of my journey: they strengthen my creativity, discipline and ability to deliver meaningful results under pressure.',
@@ -135,7 +179,7 @@ const CONTENT = {
       ],
     },
     contact: {
-      kicker: '05 / CONTACT',
+      kicker: '07 / CONTACT',
       title1: 'A project, a mission',
       title2: 'or a competition?',
       text: 'I’m open to opportunities in frontend development, cybersecurity, systems and networks, as well as high-impact product projects.',
@@ -151,7 +195,7 @@ const CONTENT = {
     },
   },
   fr: {
-    nav: { about: 'À propos', projects: 'Projets', activities: 'Activités', journey: 'Parcours', contact: 'Contact', talk: 'Discutons' },
+    nav: { about: 'À propos', education: 'Formation', experience: 'Expérience', projects: 'Projets', activities: 'Activités', journey: 'Parcours', contact: 'Contact', talk: 'Discutons' },
     accessibility: {
       home: 'Retour à l’accueil',
       nav: 'Navigation principale',
@@ -163,6 +207,7 @@ const CONTENT = {
       closeMenu: 'Fermer le menu',
       language: 'Changer de langue',
       email: 'Envoyer un e-mail',
+      linkedin: 'Ouvrir le profil LinkedIn',
     },
     hero: {
       eyebrow: 'CYBERSÉCURITÉ · FRONTEND · SYSTÈMES & RÉSEAUX',
@@ -188,8 +233,49 @@ const CONTENT = {
       { icon: 'code', title: 'Développement Frontend', text: 'Interfaces modernes et responsives, avec une attention particulière au produit, à l’utilisabilité et aux détails visuels.' },
       { icon: 'network', title: 'Systèmes & Réseaux', text: 'Linux, Windows, Active Directory, LDAP, administration réseau et déploiement sécurisé de services.' },
     ],
+    education: {
+      kicker: '02 / FORMATION',
+      title: 'Parcours académique',
+      intro: 'Mon parcours académique est centré sur l’administration des systèmes et réseaux, avec une progression marquée vers la cybersécurité et la sécurisation des infrastructures.',
+      items: [
+        { period: '2024 — 2026', degree: 'Master 2 en Administration des systèmes et réseaux', school: 'Université de Fianarantsoa · École Nationale d’Informatique (ENI)' },
+        { period: '2021 — 2024', degree: 'Licence en Administration des systèmes et réseaux', school: 'Université de Fianarantsoa · École Nationale d’Informatique (ENI)' },
+        { period: '2019 — 2020', degree: 'Baccalauréat Série C', school: 'Lycée Notre Dame · Mahajanga' },
+      ],
+    },
+    experience: {
+      kicker: '03 / EXPÉRIENCES PROFESSIONNELLES',
+      title1: 'De la technique',
+      title2: 'au leadership.',
+      intro: 'Mon expérience professionnelle combine direction d’entreprise, DevSecOps, administration systèmes et sécurisation des infrastructures.',
+      current: 'ACTUELLEMENT',
+      items: [
+        {
+          period: 'JAN 2026 — AUJOURD’HUI',
+          role: 'CEO & Experte en cybersécurité',
+          company: 'IKOM Entreprise',
+          description: 'Direction d’IKOM Entreprise tout en apportant une expertise en cybersécurité à ses initiatives numériques, technologiques et produit, avec un accent sur des solutions sûres et fiables.',
+          tags: ['Leadership', 'Stratégie', 'Projets numériques'],
+          current: true,
+        },
+        {
+          period: 'AOÛT 2024 — JAN 2025',
+          role: 'Stagiaire DevSecOps',
+          company: 'Innov-T · Fianarantsoa',
+          description: 'Participation au déploiement et à l’automatisation des services, ainsi qu’à la maintenance et à la sécurisation des applications.',
+          tags: ['DevSecOps', 'Automatisation', 'Sécurité'],
+        },
+        {
+          period: 'SEPT 2023 — NOV 2023',
+          role: 'Stagiaire en Administration Systèmes & Réseaux',
+          company: 'Refrigepêche Ouest',
+          description: 'Administration des accès et sessions utilisateurs avec LDAP et Active Directory, déploiement de solutions IDS/IPS et support matériel et logiciel.',
+          tags: ['Active Directory', 'LDAP', 'IDS/IPS'],
+        },
+      ],
+    },
     projects: {
-      kicker: '02 / PROJETS',
+      kicker: '04 / PROJETS',
       title1: 'Des projets utiles,',
       title2: 'visibles et concrets.',
       intro: 'Une sélection de projets qui reflètent ma double orientation : créer des produits web soignés et développer des solutions techniques à valeur réelle.',
@@ -217,7 +303,7 @@ const CONTENT = {
       ],
     },
     activities: {
-      kicker: '03 / ACTIVITÉS & COMMUNAUTÉ',
+      kicker: '05 / ACTIVITÉS & COMMUNAUTÉ',
       title1: 'Partager, organiser,',
       title2: 's’ouvrir au monde.',
       intro: 'Au-delà des projets et des compétitions, je m’investis dans des expériences internationales, des communautés cybersécurité et le partage de mon parcours dans la tech.',
@@ -228,7 +314,7 @@ const CONTENT = {
       ],
     },
     journey: {
-      kicker: '04 / PARCOURS',
+      kicker: '06 / PARCOURS',
       title1: 'Construire, tester,',
       title2: 'progresser par les défis.',
       intro: 'Les compétitions techniques font partie intégrante de mon parcours : elles renforcent ma créativité, ma rigueur et ma capacité à produire des résultats utiles sous pression.',
@@ -245,7 +331,7 @@ const CONTENT = {
       ],
     },
     contact: {
-      kicker: '05 / CONTACT',
+      kicker: '07 / CONTACT',
       title1: 'Un projet, une mission',
       title2: 'ou une compétition ?',
       text: 'Je suis ouverte aux opportunités en développement frontend, cybersécurité, systèmes et réseaux, ainsi qu’aux projets produit à fort impact.',
@@ -431,6 +517,8 @@ function App() {
         { type: 'output', text: 'focus      — show my focus areas' },
         { type: 'output', text: 'projects   — show featured projects' },
         { type: 'output', text: 'activities — show activities & community work' },
+        { type: 'output', text: 'education  — show academic background' },
+        { type: 'output', text: 'experience — show professional experience' },
         { type: 'output', text: 'awards     — show recent achievements' },
         { type: 'output', text: 'contact    — show contact details' },
         { type: 'output', text: 'theme      — toggle dark / light mode' },
@@ -442,6 +530,8 @@ function App() {
         { type: 'output', text: 'focus      — afficher mes domaines principaux' },
         { type: 'output', text: 'projects   — afficher les projets phares' },
         { type: 'output', text: 'activities — afficher mes activités et engagements' },
+        { type: 'output', text: 'education  — afficher mon parcours académique' },
+        { type: 'output', text: 'experience — afficher mes expériences professionnelles' },
         { type: 'output', text: 'awards     — afficher les distinctions récentes' },
         { type: 'output', text: 'contact    — afficher mes coordonnées' },
         { type: 'output', text: 'theme      — changer le mode sombre / clair' },
@@ -485,6 +575,26 @@ function App() {
         { type: 'output', text: '02  Hackhunt — organisation CTF · ENI / MegaEvent / IKOM' },
         { type: 'output', text: '03  WICE — speaker · Women in Cybersecurity Education' },
       ];
+    } else if (normalized === 'education' || normalized === 'school' || normalized === 'formation') {
+      output = language === 'en' ? [
+        { type: 'output', text: '2024—2026  Master 2 · Systems & Network Administration · ENI' },
+        { type: 'output', text: '2021—2024  Bachelor’s degree · Systems & Network Administration · ENI' },
+        { type: 'output', text: '2019—2020  Baccalauréat Série C · Lycée Notre Dame, Mahajanga' },
+      ] : [
+        { type: 'output', text: '2024—2026  Master 2 · Administration des systèmes et réseaux · ENI' },
+        { type: 'output', text: '2021—2024  Licence · Administration des systèmes et réseaux · ENI' },
+        { type: 'output', text: '2019—2020  Baccalauréat Série C · Lycée Notre Dame, Mahajanga' },
+      ];
+    } else if (normalized === 'experience' || normalized === 'work' || normalized === 'jobs') {
+      output = language === 'en' ? [
+        { type: 'success', text: 'Jan 2026—Present  CEO & Cybersecurity Expert · IKOM Entreprise' },
+        { type: 'output', text: 'Aug 2024—Jan 2025  DevSecOps Intern · Innov-T' },
+        { type: 'output', text: 'Sep 2023—Nov 2023  Systems & Network Administration Intern · Refrigepêche Ouest' },
+      ] : [
+        { type: 'success', text: 'Jan 2026—Aujourd’hui  CEO & Experte en cybersécurité · IKOM Entreprise' },
+        { type: 'output', text: 'Août 2024—Jan 2025  Stagiaire DevSecOps · Innov-T' },
+        { type: 'output', text: 'Sept 2023—Nov 2023  Stage Administration Systèmes & Réseaux · Refrigepêche Ouest' },
+      ];
     } else if (normalized === 'awards' || normalized === 'awards --latest') {
       output = language === 'en' ? [
         { type: 'success', text: 'Cyber League 2026 — qualified for the Playoffs' },
@@ -499,6 +609,7 @@ function App() {
       output = [
         { type: 'output', text: 'Email  : jennysclady@gmail.com' },
         { type: 'output', text: 'GitHub : github.com/jennylady' },
+        { type: 'output', text: 'LinkedIn: linkedin.com/in/ladydi-jennysca-711650319/' },
       ];
     } else if (normalized === 'theme' || normalized === 'theme toggle') {
       const next = theme === 'dark' ? 'light' : 'dark';
@@ -517,7 +628,7 @@ function App() {
       window.open('https://etakalo.me/', '_blank', 'noopener,noreferrer');
       output = [{ type: 'success', text: language === 'en' ? 'Opening E-Takalo…' : 'Ouverture d’E-Takalo…' }];
     } else if (normalized === 'ls') {
-      output = [{ type: 'output', text: 'about/  projects/  activities/  journey/  contact/' }];
+      output = [{ type: 'output', text: 'about/  education/  experience/  projects/  activities/  journey/  contact/' }];
     } else if (normalized === 'pwd') {
       output = [{ type: 'output', text: '~/portfolio/lady-jennysca' }];
     } else {
@@ -567,6 +678,8 @@ function App() {
 
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`} aria-label={t.accessibility.nav}>
           <a href="#about" onClick={closeMenu}>{t.nav.about}</a>
+          <a href="#education" onClick={closeMenu}>{t.nav.education}</a>
+          <a href="#experience" onClick={closeMenu}>{t.nav.experience}</a>
           <a href="#projects" onClick={closeMenu}>{t.nav.projects}</a>
           <a href="#activities" onClick={closeMenu}>{t.nav.activities}</a>
           <a href="#journey" onClick={closeMenu}>{t.nav.journey}</a>
@@ -578,6 +691,16 @@ function App() {
             <button type="button" className={language === 'en' ? 'active' : ''} onClick={() => applyLanguage('en')} aria-pressed={language === 'en'}>EN</button>
             <button type="button" className={language === 'fr' ? 'active' : ''} onClick={() => applyLanguage('fr')} aria-pressed={language === 'fr'}>FR</button>
           </div>
+          <a
+            className="social-topbar"
+            href="https://www.linkedin.com/in/ladydi-jennysca-711650319/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label={t.accessibility.linkedin}
+            title="LinkedIn"
+          >
+            <Icon name="linkedin" size={17} />
+          </a>
           <button
             className="theme-toggle"
             type="button"
@@ -678,6 +801,72 @@ function App() {
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+
+        </section>
+
+        <section className="section education-section" id="education">
+          <div className="education-shell">
+            <div className="education-intro" data-reveal="left">
+              <div className="section-kicker">{t.education.kicker}</div>
+              <h2>{t.education.title}</h2>
+              <p>{t.education.intro}</p>
+              <a
+                className="education-linkedin"
+                href="https://www.linkedin.com/in/ladydi-jennysca-711650319/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon name="linkedin" size={18} /> LinkedIn
+                <Icon name="external" size={15} />
+              </a>
+            </div>
+
+            <div className="education-timeline" data-reveal="right">
+              {t.education.items.map((item, index) => (
+                <article className="education-card" key={`${item.period}-${item.degree}`} data-reveal="up" style={{ '--reveal-delay': `${index * 85}ms` }}>
+                  <div className="education-card-top">
+                    <span className="education-card-index">0{index + 1}</span>
+                    <span className="education-card-period">{item.period}</span>
+                  </div>
+                  <h3>{item.degree}</h3>
+                  <p>{item.school}</p>
+                  <div className="education-card-line" aria-hidden="true"><span /></div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section experience-section" id="experience">
+          <div className="experience-head" data-reveal="left">
+            <div className="section-kicker">{t.experience.kicker}</div>
+            <h2>{t.experience.title1}<br /><span>{t.experience.title2}</span></h2>
+            <p>{t.experience.intro}</p>
+          </div>
+
+          <div className="experience-list">
+            {t.experience.items.map((item, index) => (
+              <article className={`experience-card ${item.current ? 'is-current' : ''}`} key={`${item.period}-${item.role}`} data-reveal="up" style={{ '--reveal-delay': `${index * 90}ms` }}>
+                <div className="experience-rail" aria-hidden="true"><span /></div>
+                <div className="experience-meta">
+                  <span className="experience-index">0{index + 1}</span>
+                  <span className="experience-period">{item.period}</span>
+                  {item.current && <span className="experience-current">{t.experience.current}</span>}
+                </div>
+                <div className="experience-body">
+                  <div className="experience-role-line">
+                    <span className="experience-icon"><Icon name="briefcase" size={19} /></span>
+                    <div>
+                      <h3>{item.role}</h3>
+                      <h4>{item.company}</h4>
+                    </div>
+                  </div>
+                  <p>{item.description}</p>
+                  <div className="experience-tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                </div>
               </article>
             ))}
           </div>
@@ -785,6 +974,7 @@ function App() {
             <div className="cta-actions">
               <a className="button button-light" href="mailto:jennysclady@gmail.com"><Icon name="mail" size={18} /> {t.contact.email}</a>
               <a className="button button-outline-light" href="https://github.com/jennylady" target="_blank" rel="noreferrer"><Icon name="github" size={18} /> GitHub</a>
+              <a className="button button-outline-light" href="https://www.linkedin.com/in/ladydi-jennysca-711650319/" target="_blank" rel="noreferrer"><Icon name="linkedin" size={18} /> LinkedIn</a>
             </div>
           </div>
         </section>
@@ -794,6 +984,7 @@ function App() {
         <div className="footer-left"><span className="brand-mark small">LJ</span><p>Portfolio · Ladydi Jénnysca Razanaparany</p></div>
         <div className="footer-links">
           <a href="https://github.com/jennylady" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github" size={18} /></a>
+          <a href="https://www.linkedin.com/in/ladydi-jennysca-711650319/" target="_blank" rel="noreferrer" aria-label={t.accessibility.linkedin}><Icon name="linkedin" size={18} /></a>
           <a href="mailto:jennysclady@gmail.com" aria-label={t.accessibility.email}><Icon name="mail" size={18} /></a>
         </div>
         <div className="footer-copy">© {new Date().getFullYear()}</div>
