@@ -1,0 +1,9 @@
+{
+  "short_name": "Toky Portfolio",
+  "name": "Toky Nandrasana \u2014 Cybersecurity Portfolio",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
